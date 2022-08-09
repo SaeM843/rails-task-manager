@@ -15,4 +15,8 @@ Rails.application.routes.draw do
   # view the details of tasks
   get '/tasks/:id', to: 'tasks#show', as: :task
 
+  # get a page for the from to edit
+  get '/tasks/:id/edit', to: 'tasks#edit', as: :edit_task
+  # need a place to send the edited information
+  patch '/tasks/:id', to: 'tasks#update'
 end
