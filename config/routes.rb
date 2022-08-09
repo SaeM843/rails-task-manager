@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   get '/tasks/:id/edit', to: 'tasks#edit', as: :edit_task
   # need a place to send the edited information
   patch '/tasks/:id', to: 'tasks#update'
+
+  # Destroy
+  delete '/tasks/:id', to: 'tasks#destroy'
 end
